@@ -12,3 +12,11 @@ knitr::opts_chunk$set(echo = TRUE)
 # Code chunk
 ```
 
+```{r}
+library(dplyr)
+load ( here::here( "data/lipidomics.rda") 
+)
+lipidomics%>%select(gender , age)%>%filter(age>=25)
+
+```
+

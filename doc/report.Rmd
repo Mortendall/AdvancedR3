@@ -10,8 +10,28 @@ date: "`r Sys.Date()`"
 format: html
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r setup}
+library(tidyverse)
+library(targets)
+
+lipidomics <- targets::tar_read(lipidomics)
+```
+
+## Results
+
+```{r}
+targets::tar_read(df_stats_by_metabolite) %>%
+  mutate(MeanSD = glue::glue("{value_mean} ({value_sd})")) %>%
+  select(Metabolite = metabolite, `Mean SD` = MeanSD) %>%
+  knitr::kable(caption = "Descriptive statistics of the metabolites.")
+```
+
+```{r}
+tar_read(fig_gender_by_class)
+```
+
+```{r}
+tar_read(fig_distribution_metabolites)
 ```
 
 # Abstract
@@ -24,7 +44,7 @@ Results:
 
 Conclusions:
 
-# Introduction 
+# Introduction
 
 # Research Design and Methods
 

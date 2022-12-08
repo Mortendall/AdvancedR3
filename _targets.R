@@ -5,7 +5,7 @@
 
 # Load packages required to define the pipeline:
 library(targets)
-# library(tarchetypes) # Load other packages as needed. # nolint
+ library(tarchetypes) # Load other packages as needed. # nolint
 
 # Set target options:
 tar_option_set(
@@ -44,7 +44,11 @@ list(
         command = plot_count_stats(lipidomics)
     ),
     tar_target(
-        name = fig_metabolite_distribution,
+        name = fig_distribution_metabolites,
         command = plot_distributions(lipidomics)
+    ),
+    tar_render(
+        name = report_rmd,
+        path = "doc/report.Rmd"
     )
 )

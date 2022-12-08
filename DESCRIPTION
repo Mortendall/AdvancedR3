@@ -15,6 +15,7 @@ Imports:
     rmarkdown,
     snakecase,
     stringr,
+    tarchetypes,
     targets,
     tidyr,
     usethis

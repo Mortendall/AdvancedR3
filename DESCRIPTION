@@ -3,6 +3,7 @@ Package: AdvancedR3
 Version: 0.0.1
 Depends: 
     R (>= 2.10),
+    tidymodels,
     tidyverse
 Imports:
     dplyr,
@@ -10,15 +11,18 @@ Imports:
     ggplot2,
     here,
     knitr,
+    parsnip,
     readr,
     readxl,
+    recipes,
     rmarkdown,
     snakecase,
     stringr,
     tarchetypes,
     targets,
     tidyr,
-    usethis
+    usethis,
+    workflows
 Suggests: 
     lintr,
     renv,

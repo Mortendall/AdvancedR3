@@ -33,6 +33,7 @@ lipidomics %>%
 
 ```{r setup}
 library(tidyverse)
+library(tidymodels)
 source(here::here("R/functions.R"))
 load(here::here("data/lipidomics.rda"))
 ```

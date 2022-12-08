@@ -47,7 +47,7 @@ list(
         name = fig_distribution_metabolites,
         command = plot_distributions(lipidomics)
     ),
-    tar_render(
+    tar_quarto(
         name = report_rmd,
         path = "doc/report.Rmd"
     )

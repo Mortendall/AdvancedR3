@@ -5,3 +5,5 @@
 data-raw/nmr-omics/
 data/lipidomics.csv
 _targets
+
+/.quarto/

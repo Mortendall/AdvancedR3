@@ -18,7 +18,7 @@ tar_option_set(
 options(clustermq.scheduler = "multiprocess")
 
 # tar_make_future() configuration (okay to leave alone):
-# Install packages {{future}}, {{future.callr}}, and {{future.batchtools}} to allow use_targets() to configure tar_make_future() options.
+# Install packages {{future}}, {{future.callr}}, and {{future.batchtools}} to allow use_targets() to configure tar_make_future() options. # nolint
 
 # Run the R scripts in the R/ folder with your custom functions:
 tar_source()

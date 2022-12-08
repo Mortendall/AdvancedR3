@@ -9,7 +9,7 @@ library(targets)
 
 # Set target options:
 tar_option_set(
-    packages = desc::desc_get_deps()$package[-1], # packages that your targets need to run
+    packages = desc::desc_get_deps()$package[-1], # packages that your targets need to run # nolint
   format = "rds" # default storage format
   # Set other options as needed.
 )

@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 data-raw/nmr-omics/
+data/lipidomics.csv
+_targets

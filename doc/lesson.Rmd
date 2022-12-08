@@ -29,3 +29,18 @@ lipidomics %>%
 -   Definitely should have an empty space above this list.
 -   This isn't a list, why not?
 
+## Basic statistics
+
+```{r setup}
+library(tidyverse)
+source(here::here("R/functions.R"))
+load(here::here("data/lipidomics.rda"))
+```
+
+```{r basic-stats}
+
+lipidomics %>%
+  group_by(metabolite) %>%
+  summarise(across(value, list(mean = mean, sd = sd))) %>%
+  mutate(across(where(is.numeric), round, digits = 1))
+```

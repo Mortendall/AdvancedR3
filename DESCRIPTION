@@ -6,6 +6,7 @@ Depends:
     tidymodels,
     tidyverse
 Imports:
+    broom,
     dplyr,
     fs,
     ggplot2,
